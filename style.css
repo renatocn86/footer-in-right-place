@@ -1,0 +1,40 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#container {
+  position: relative; /* A posição do container deve ser relativa */
+  min-height: 100vh; /* Especificar a altura do container em vh*/
+}
+
+#topo, #content, #footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#topo{
+  height: 100px;
+  width: 100%;
+}
+
+#content{
+  width: 100%;
+  min-height: calc(100vh - 100px); /* Subtraindo a altura do topo para que, caso não tenha conteudo suficiente, a div content preencha toda a altura da página sem exibir o rodapé*/
+  flex-direction: column;
+  padding: 15mm;
+  padding-bottom: calc(200px + 15mm); /*Considerando a altura do rodapé, para que ele não se sobreponha sobre o conteúdo e vice-versa*/
+  background-color: #eee;
+  min-height: calc(100vh - 100px); /* Subtraindo a altura do topo para que, caso não tenha conteudo suficiente, a div content preencha toda a altura da página sem exibir o rodapé*/
+}
+
+#footer {
+  position: absolute; /*Fixando no fim da página*/
+  bottom: 0; /*Fixando no fim da página*/
+  width: 100%;
+  height: 200px; /* */
+  color: white;
+  background-color: #333;
+}
